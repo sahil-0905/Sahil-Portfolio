@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-display: 'Outfit', system-ui, -apple-system, sans-serif;
+  
+  --color-primary: var(--primary);
+  --color-background-custom: var(--background);
+  --color-foreground-custom: var(--foreground);
+}
+
+@layer base {
+  :root {
+    /* Light Mode CSS Variables */
+    --background: #f8fafc; /* Slate 50 */
+    --foreground: #0f172a; /* Slate 900 */
+    --card: #ffffff;
+    --card-foreground: #0f172a;
+    --primary: #3b82f6; /* Blue 500 */
+    --accent: #2563eb; /* Blue 600 */
+    --border: #e2e8f0; /* Slate 200 */
+    --glass-bg: rgba(255, 255, 255, 0.65);
+    --glass-border: rgba(15, 23, 42, 0.08);
+    --glow-color: rgba(59, 130, 246, 0.15);
+  }
+
+  .dark {
+    /* Dark Mode CSS Variables (Default) */
+    --background: #030712; /* Gray 950 */
+    --foreground: #f9fafb; /* Gray 50 */
+    --card: #0b0f19; /* Dark premium blue-gray card */
+    --card-foreground: #f9fafb;
+    --primary: #60a5fa; /* Blue 400 */
+    --accent: #3b82f6; /* Blue 500 */
+    --border: #1f2937; /* Gray 800 */
+    --glass-bg: rgba(3, 7, 18, 0.65);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --glow-color: rgba(96, 165, 250, 0.12);
+  }
+
+  * {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+    margin: 0;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 700;
+  }
+}
+
+/* Custom CSS Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 8px;
+  border: 2px solid var(--background);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+/* Glassmorphism Styles */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+}
+
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  border-color: rgba(96, 165, 250, 0.3);
+  box-shadow: 0 10px 40px rgba(96, 165, 250, 0.08);
+  transform: translateY(-4px);
+}
+
+/* Animated background radial glow */
+@keyframes floatGlow {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.8;
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+    opacity: 1;
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.95);
+    opacity: 0.7;
+  }
+}
+
+.glow-bubble {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, var(--glow-color) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  mix-blend-mode: plus-lighter;
+}
+
+.glow-bubble-1 {
+  top: 10%;
+  left: 5%;
+  animation: floatGlow 15s infinite alternate ease-in-out;
+}
+
+.glow-bubble-2 {
+  bottom: 20%;
+  right: 5%;
+  animation: floatGlow 20s infinite alternate-reverse ease-in-out;
+}
+
+.glow-bubble-3 {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: floatGlow 25s infinite alternate ease-in-out;
+}
+
+/* Typing cursor animation */
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.cursor-blink {
+  border-right: 3px solid var(--primary);
+  animation: blink 0.75s step-end infinite;
+}
