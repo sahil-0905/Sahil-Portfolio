@@ -55,11 +55,11 @@ export default function About() {
                 Professional Summary
               </h3>
               <p className="text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
-                I am a passionate software developer eager to bridge the gap between robust enterprise systems and modern web designs. Currently pursuing specialized SAP training, I love developing responsive web interfaces and full-stack solutions. 
+               A motivated and enthusiastic Software Developer with a passion for Full Stack Development, AI technologies, and enterprise applications. Experienced in building responsive web applications and solving real-world problems through clean, scalable, and efficient code. Committed to continuous learning and creating innovative digital solutions that enhance user experiences.
               </p>
-              <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+              {/* <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
                 With a background in Computer Science, I bring a solid understanding of data structures, database designs, and system architectures, allowing me to build efficient, scalable application pipelines.
-              </p>
+              </p> */}
             </div>
 
             <div className="glass-card p-8 rounded-2xl text-left border border-slate-200/50 dark:border-slate-800/50 bg-blue-500/[0.02] dark:bg-blue-500/[0.01]">
@@ -67,7 +67,7 @@ export default function About() {
                 Career Objective
               </h3>
               <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-                To leverage my competencies in SAP and Full-Stack development to engineer premium solutions that optimize enterprise efficiency and enrich client-side experiences. I aim to grow continuously, collaborate with diverse teams, and solve complex business problems.
+                Seeking opportunities to apply my technical knowledge and development skills in a dynamic environment where I can contribute to impactful projects, grow as a software professional, and help organizations achieve their goals through innovative technology solutions.
               </p>
             </div>
           </motion.div>

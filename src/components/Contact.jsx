@@ -40,7 +40,7 @@ const CONTACT_CARDS = [
     icon: Mail,
     label: 'Email Me',
     value: 'sahilkr9608@gmail.com',
-    link: 'sahilkr9608@gmail.com',
+    link: 'mailto:sahilkr9608@gmail.com',
   },
   {
     icon: Phone,
@@ -153,7 +153,7 @@ const handleSubmit = async (e) => {
 };
 
   return (
-    <section id="contact" className="py-24 relative overflow-hidden bg-slate-500/[0.01]">
+    <section id="contact" className="py-24 relative  bg-slate-500/[0.01]">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         
         {/* Section Heading */}

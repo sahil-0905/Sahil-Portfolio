@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Download } from 'lucide-react';
 import ParticleBackground from './ParticleBackground';
-
+import { SiLeetcode } from "react-icons/si";
+import { FaLinkedinIn } from "react-icons/fa";
 const ROLES = ["SAP Trainee", "Full Stack Developer", "Problem Solver"];
 
 export default function Hero() {
@@ -71,24 +72,45 @@ export default function Hero() {
             </span>
           </h2>
           <p className="text-base sm:text-lg text-slate-600 dark:text-slate-400 max-w-xl mb-8 leading-relaxed">
-            A technology enthusiast working at the intersection of enterprise solutions and modern web technologies. I specialize in SAP systems and Full Stack web applications, bridging data and design to create high-impact products.
+            I'm a passionate Full Stack Developer focused on creating modern, scalable, and user-centric digital solutions. My expertise spans web application development, AI-powered automation, and enterprise technologies, enabling me to build products that are both technically robust and visually engaging. I enjoy solving real-world problems through clean architecture, efficient code, and innovative thinking, turning ideas into impactful experiences that drive business and user success.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4">
-            <button
-              onClick={handleScrollToProjects}
-              className="px-6 py-3.5 bg-blue-600 hover:bg-blue-500 text-white font-medium rounded-xl flex items-center justify-center gap-2 transition-all shadow-lg shadow-blue-500/25 hover:shadow-blue-500/35 cursor-pointer"
-            >
-              View Projects <ArrowRight size={18} />
-            </button>
-            <a
-              href="/Sahil_Kumar_Resume.pdf"
-              download="Sahil_Kumar_Resume.pdf"
-              className="px-6 py-3.5 glass hover:bg-slate-100 dark:hover:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-200 font-medium rounded-xl flex items-center justify-center gap-2 transition-all cursor-pointer"
-            >
-              Download Resume <Download size={18} />
-            </a>
-          </div>
+         <div className="flex flex-wrap gap-3">
+  <button
+    onClick={handleScrollToProjects}
+    className="px-5 py-3 bg-blue-600 hover:bg-blue-500 text-white font-medium rounded-xl flex items-center justify-center gap-2 transition-all shadow-lg shadow-blue-500/25 hover:shadow-blue-500/35 cursor-pointer whitespace-nowrap"
+  >
+    View Projects <ArrowRight size={16} />
+  </button>
+
+  <a
+    href="https://www.linkedin.com/in/YOUR_USERNAME"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="px-5 py-3 bg-[#0A66C2]/10 border border-[#0A66C2]/50 text-[#0A66C2] hover:bg-[#0A66C2] hover:text-white font-medium rounded-xl flex items-center justify-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-[#0A66C2]/30 cursor-pointer whitespace-nowrap"
+  >
+    <FaLinkedinIn size={16} />
+    LinkedIn
+  </a>
+
+  <a
+    href="https://leetcode.com/u/sahil_0905/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="px-5 py-3 bg-[#FFA116]/10 border border-[#FFA116]/50 text-[#FFA116] hover:bg-[#FFA116] hover:text-black font-medium rounded-xl flex items-center justify-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-[#FFA116]/30 cursor-pointer whitespace-nowrap"
+  >
+    <SiLeetcode size={16} />
+    LeetCode
+  </a>
+
+  <a
+    href="/resume.pdf"
+    download="resume.pdf"
+    className="px-5 py-3 glass hover:bg-slate-100 dark:hover:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-200 font-medium rounded-xl flex items-center justify-center gap-2 transition-all cursor-pointer whitespace-nowrap"
+  >
+    Resume <Download size={16} />
+  </a>
+</div>
         </motion.div>
 
         {/* Right profile graphic section */}
@@ -107,7 +129,7 @@ export default function Hero() {
  <img
   src="/profile.png"
   alt="Sahil Kumar Profile Photo"
-  className="w-full h-full object-cover scale-90 object-center transition-transform duration-700 group-hover:scale-95"
+  className="w-full h-full object-cover scale-90 object-center transition-transform duration-700 "
 /> 
 </div>
             

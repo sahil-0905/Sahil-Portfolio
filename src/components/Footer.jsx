@@ -40,17 +40,17 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative py-12 border-t border-slate-200/10 dark:border-slate-800/10 overflow-hidden">
+    <footer className="relative py-12 pt-16 border-t border-slate-200/10 dark:border-slate-800/10">
       
       {/* Scroll to top button */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
+     <div className="absolute left-1/2 -top-6 -translate-x-1/2 z-[9999]">
         <button
-          onClick={handleScrollToTop}
-          className="p-3 bg-blue-600 text-white rounded-full shadow-lg shadow-blue-500/25 hover:bg-blue-500 hover:shadow-blue-500/35 transition-all cursor-pointer"
-          aria-label="Scroll to Top"
-        >
-          <ArrowUp size={18} />
-        </button>
+  onClick={handleScrollToTop}
+  className="p-3 bg-blue-600 text-white rounded-full shadow-lg shadow-blue-500/25 hover:bg-blue-500 hover:shadow-blue-500/35 transition-all cursor-pointer"
+  aria-label="Scroll to Top"
+>
+  <ArrowUp size={18} />
+</button>
       </div>
 
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
@@ -68,14 +68,14 @@ export default function Footer() {
         {/* Social Quick Links */}
         <div className="flex items-center gap-4">
           <a
-            href="mailto:sahilkumar.dev@gmail.com"
+            href="mailto:sahilkr9608@gmail.com"
             className="p-2 bg-slate-100 hover:bg-slate-200 dark:bg-slate-900 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-400 rounded-lg border border-slate-200/20 dark:border-slate-800/20 transition-all cursor-pointer"
             aria-label="Email Address"
           >
             <Mail size={18} />
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/sahil-kumar-3345a328a/"
             target="_blank"
             rel="noopener noreferrer"
             className="p-2 bg-slate-100 hover:bg-slate-200 dark:bg-slate-900 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-400 rounded-lg border border-slate-200/20 dark:border-slate-800/20 transition-all cursor-pointer"
@@ -84,7 +84,7 @@ export default function Footer() {
             <Linkedin size={18} />
           </a>
           <a
-            href="https://github.com"
+            href="https://github.com/sahil-0905"
             target="_blank"
             rel="noopener noreferrer"
             className="p-2 bg-slate-100 hover:bg-slate-200 dark:bg-slate-900 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-400 rounded-lg border border-slate-200/20 dark:border-slate-800/20 transition-all cursor-pointer"
