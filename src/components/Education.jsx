@@ -5,7 +5,7 @@ import { GraduationCap, Calendar, BookOpen, Award } from 'lucide-react';
 const EDUCATION_DATA = {
   degree: 'Bachelor of Technology',
   field: 'Computer Science & Engineering',
-  duration: '2022 - 2026',
+  duration: '2023 - 2027',
   institution: 'State Technical University',
   description: 'Studying core computation principles, software structures, and modern systems architecture. Participated in multiple coding projects and hackathons.',
   subjects: [

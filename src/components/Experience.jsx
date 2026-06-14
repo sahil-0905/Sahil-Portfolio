@@ -5,9 +5,9 @@ import { Briefcase, Calendar, CheckCircle } from 'lucide-react';
 const EXPERIENCE_DATA = [
   {
     role: 'SAP Trainee',
-    duration: '2025 - Present',
-    organization: 'Enterprise Resource Planning Division',
-    description: 'Training in modern SAP frameworks, enterprise configurations, and cloud deployment pipelines.',
+    duration: 'Apr 2026 - Present',
+    organization: 'Jenu Digitech Labs Private Limited',
+    description: 'Training in modern SAP ERP, SAP MII, SAP ui5.',
     bullets: [
       'Gaining hands-on knowledge in SAP Analytics dashboards and transaction monitoring.',
       'Integrating database schemas and analytics widgets into responsive dashboards.',
@@ -15,9 +15,9 @@ const EXPERIENCE_DATA = [
     ]
   },
   {
-    role: 'Full Stack Development Learner',
-    duration: '2024 - Present',
-    organization: 'Independent Tech Training & Open Source',
+    role: 'Full Stack Development Intern',
+    duration: 'jun 2025 - jul 2025',
+    organization: 'Cynbit Technologies',
     description: 'Deepened expertise in JavaScript ecosystems, standard databases, and responsive layouts.',
     bullets: [
       'Engineered and launched multi-component full stack web apps (JWT auth, MongoDB posts).',
