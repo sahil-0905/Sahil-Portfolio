@@ -18,7 +18,7 @@ const Github = (props) => (
   </svg>
 );
 
-const CATEGORIES = ['All', 'Full Stack', 'Frontend', 'Machine Learning'];
+const CATEGORIES = ['All', 'Full Stack', 'Frontend', 'Machine Learning', 'AI/ML'];
 
 const PROJECTS_DATA = [
   {
@@ -123,6 +123,48 @@ const PROJECTS_DATA = [
     github: 'https://github.com/sahil-0905/Mental_Health_Score',
     demo: 'https://mental-health-score-zqix.onrender.com/',
   },
+
+{
+  id: 6,
+  title: 'AI Gym Coach - AI-Powered Fitness Assistant',
+  description:
+    'Developed an AI-powered fitness coaching application that uses real-time computer vision and pose estimation to analyze exercise movements, track workout performance, and provide intelligent feedback. Integrated Generative AI and voice assistance to deliver contextual fitness guidance during workouts.',
+  features: [
+    'Real-Time Pose Detection and Exercise Movement Analysis using MediaPipe and OpenCV',
+    'Workout Repetition and Set Tracking',
+    'Groq LLM Integration for AI-Powered Exercise Feedback',
+    'Voice-Based Coaching using Text-to-Speech (gTTS)',
+    'Real-Time Video Streaming using Streamlit WebRTC',
+  ],
+  image: '/ai.png',
+  tags: ['Python', 'MediaPipe', 'OpenCV', 'Streamlit', 'Groq LLM', 'WebRTC', 'gTTS'],
+  category: 'AI/ML',
+  github: 'https://github.com/sahil-0905/AI_GYM_COACH',
+  demo: 'https://ai-gym-coach-sahil.streamlit.app/',
+},
+
+{
+  id: 7,
+  title: 'SnapClass - Smart Attendance System',
+  description:
+    'Developed an AI-powered smart attendance management system that enables students to mark attendance using face recognition and voice-based interaction. Built dedicated Teacher and Student portals to simplify attendance management, automate student identification, and provide an interactive attendance tracking experience.',
+  features: [
+    'Face Recognition-Based Student Identification',
+    'Voice-Based Attendance Marking',
+    'Automated Attendance Management',
+    'Dedicated Teacher and Student Portals',
+    'Supabase Database Integration',
+    'Interactive Dashboard using Streamlit',
+    'Cloud Deployment on Streamlit Community Cloud',
+  ],
+  image: '/snapclass.png',
+  tags: ['Python', 'Streamlit', 'Supabase', 'Face Recognition', 'Voice Recognition', 'AI/ML'],
+  category: 'AI/ML',
+  github: 'https://github.com/sahil-0905/Snap_Class',
+  demo: 'https://snapclass-mwzyh2p8j9tnts8ar4dclm.streamlit.app/',
+},
+
+
 ];
 
 export default function Projects() {

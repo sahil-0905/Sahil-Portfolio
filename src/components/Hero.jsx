@@ -1,10 +1,21 @@
+
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Download } from 'lucide-react';
+import {
+  ArrowRight,
+  Download,
+} from 'lucide-react';
 import ParticleBackground from './ParticleBackground';
-import { SiLeetcode } from "react-icons/si";
-import { FaLinkedinIn } from "react-icons/fa";
-const ROLES = ["SAP Trainee", "Full Stack Developer", "Problem Solver"];
+import { SiLeetcode } from 'react-icons/si';
+import { FaLinkedinIn } from 'react-icons/fa';
+
+const ROLES = [
+  'Machine Learning Intern',
+  'AI/ML Engineer',
+  'Full Stack Developer',
+  'Generative AI Enthusiast',
+  'Problem Solver',
+];
 
 export default function Hero() {
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
@@ -13,8 +24,8 @@ export default function Hero() {
   const [typingSpeed, setTypingSpeed] = useState(120);
 
   useEffect(() => {
-    let timer;
     const activeWord = ROLES[currentRoleIndex];
+    let timer;
 
     if (isDeleting) {
       timer = setTimeout(() => {
@@ -39,105 +50,139 @@ export default function Hero() {
   }, [currentText, isDeleting, currentRoleIndex, typingSpeed]);
 
   const handleScrollToProjects = () => {
-    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('projects')?.scrollIntoView({
+      behavior: 'smooth',
+    });
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center pt-28 pb-16 overflow-hidden">
-      {/* Custom Particle Overlay */}
+    <section
+      id="hero"
+      className="relative min-h-screen flex items-center justify-center pt-28 pb-16 overflow-hidden"
+    >
       <ParticleBackground />
 
-      {/* Floating Radial Ambient Orbs */}
+      {/* Background Effects */}
       <div className="glow-bubble glow-bubble-1" />
       <div className="glow-bubble glow-bubble-2" />
 
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10 w-full">
-        {/* Left text section */}
-        <motion.div 
+
+        {/* Left Content */}
+        <motion.div
           initial={{ opacity: 0, y: 35 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: 'easeOut' }}
           className="lg:col-span-7 flex flex-col justify-center text-left"
         >
+
+          {/* Availability Badge */}
           <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold tracking-wider text-blue-500 bg-blue-500/10 border border-blue-500/20 mb-6 w-max uppercase">
             Open For Opportunities
           </span>
+
+          {/* Name */}
           <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight mb-4 text-slate-900 dark:text-white">
-            Hi, I am <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-sky-400 to-indigo-400">Sahil Kumar</span>
+            Hi, I am{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-sky-400 to-indigo-400">
+              Sahil Kumar
+            </span>
           </h1>
-          <h2 className="text-xl sm:text-3xl font-medium text-slate-700 dark:text-slate-300 mb-6 h-10 flex items-center">
+
+          {/* Animated Role */}
+          <h2 className="text-xl sm:text-3xl font-medium text-slate-700 dark:text-slate-300 mb-6 min-h-10 flex items-center flex-wrap">
             I'm a&nbsp;
             <span className="text-blue-500 dark:text-blue-400 font-semibold cursor-blink">
               {currentText}
             </span>
           </h2>
+
+          {/* Professional Introduction */}
           <p className="text-base sm:text-lg text-slate-600 dark:text-slate-400 max-w-xl mb-8 leading-relaxed">
-            I'm a passionate Full Stack Developer focused on creating modern, scalable, and user-centric digital solutions. My expertise spans web application development, AI-powered automation, and enterprise technologies, enabling me to build products that are both technically robust and visually engaging. I enjoy solving real-world problems through clean architecture, efficient code, and innovative thinking, turning ideas into impactful experiences that drive business and user success.
+            I'm a Computer Science undergraduate and aspiring AI/ML Engineer
+            with hands-on experience in Machine Learning, Computer Vision,
+            Generative AI, and Full Stack Development. I have worked on
+            developing AI-powered applications, real-time computer vision
+            systems, and scalable web solutions using Python and modern
+            technologies. Passionate about solving real-world problems
+            through intelligent systems, clean code, and continuous learning.
           </p>
 
-         <div className="flex flex-wrap gap-3">
-  <button
-    onClick={handleScrollToProjects}
-    className="px-5 py-3 bg-blue-600 hover:bg-blue-500 text-white font-medium rounded-xl flex items-center justify-center gap-2 transition-all shadow-lg shadow-blue-500/25 hover:shadow-blue-500/35 cursor-pointer whitespace-nowrap"
-  >
-    View Projects <ArrowRight size={16} />
-  </button>
+          {/* Action Buttons */}
+          <div className="flex flex-wrap gap-3">
 
-  <a
-    href="https://www.linkedin.com/in/YOUR_USERNAME"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="px-5 py-3 bg-[#0A66C2]/10 border border-[#0A66C2]/50 text-[#0A66C2] hover:bg-[#0A66C2] hover:text-white font-medium rounded-xl flex items-center justify-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-[#0A66C2]/30 cursor-pointer whitespace-nowrap"
-  >
-    <FaLinkedinIn size={16} />
-    LinkedIn
-  </a>
+            <button
+              onClick={handleScrollToProjects}
+              className="px-5 py-3 bg-blue-600 hover:bg-blue-500 text-white font-medium rounded-xl flex items-center justify-center gap-2 transition-all shadow-lg shadow-blue-500/25 hover:shadow-blue-500/35 cursor-pointer whitespace-nowrap"
+            >
+              View Projects
+              <ArrowRight size={16} />
+            </button>
 
-  <a
-    href="https://leetcode.com/u/sahil_0905/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="px-5 py-3 bg-[#FFA116]/10 border border-[#FFA116]/50 text-[#FFA116] hover:bg-[#FFA116] hover:text-black font-medium rounded-xl flex items-center justify-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-[#FFA116]/30 cursor-pointer whitespace-nowrap"
-  >
-    <SiLeetcode size={16} />
-    LeetCode
-  </a>
+            {/* LinkedIn */}
+            <a
+              href="https://www.linkedin.com/in/sahil-kumar-3345a328a/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-5 py-3 bg-[#0A66C2]/10 border border-[#0A66C2]/50 text-[#0A66C2] hover:bg-[#0A66C2] hover:text-white font-medium rounded-xl flex items-center justify-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-[#0A66C2]/30 cursor-pointer whitespace-nowrap"
+            >
+              <FaLinkedinIn size={16} />
+              LinkedIn
+            </a>
 
-  <a
-    href="/resume.pdf"
-    download="resume.pdf"
-    className="px-5 py-3 glass hover:bg-slate-100 dark:hover:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-200 font-medium rounded-xl flex items-center justify-center gap-2 transition-all cursor-pointer whitespace-nowrap"
-  >
-    Resume <Download size={16} />
-  </a>
-</div>
+            {/* LeetCode */}
+            <a
+              href="https://leetcode.com/u/sahil_0905/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-5 py-3 bg-[#FFA116]/10 border border-[#FFA116]/50 text-[#FFA116] hover:bg-[#FFA116] hover:text-black font-medium rounded-xl flex items-center justify-center gap-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-[#FFA116]/30 cursor-pointer whitespace-nowrap"
+            >
+              <SiLeetcode size={16} />
+              LeetCode
+            </a>
+
+            {/* Resume */}
+            <a
+              href="/resume.pdf"
+              download="Sahil_Kumar_Resume.pdf"
+              className="px-5 py-3 glass hover:bg-slate-100 dark:hover:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-200 font-medium rounded-xl flex items-center justify-center gap-2 transition-all cursor-pointer whitespace-nowrap"
+            >
+              Resume
+              <Download size={16} />
+            </a>
+
+          </div>
         </motion.div>
 
-        {/* Right profile graphic section */}
-        <motion.div 
+        {/* Right Profile Image */}
+        <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, delay: 0.2, ease: 'easeOut' }}
           className="lg:col-span-5 flex justify-center items-center"
         >
           <div className="relative group">
-            {/* Neon Accent Glow Ring */}
+
+            {/* Neon Glow */}
             <div className="absolute -inset-1.5 bg-gradient-to-r from-blue-500 via-sky-400 to-indigo-500 rounded-full blur-xl opacity-35 group-hover:opacity-50 transition duration-1000 group-hover:duration-200" />
-            
-           {/* Portrait Border Frame */}
-<div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-4 border-white dark:border-slate-900 shadow-2xl bg-slate-950">
- <img
-  src="/profile.png"
-  alt="Sahil Kumar Profile Photo"
-  className="w-full h-full object-cover scale-90 object-center transition-transform duration-700 "
-/> 
-</div>
-            
-            {/* Bubble Badge overlay */}
+
+            {/* Profile Image */}
+            <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-4 border-white dark:border-slate-900 shadow-2xl bg-slate-950">
+              <img
+                src="/profile.png"
+                alt="Sahil Kumar Profile Photo"
+                className="w-full h-full object-cover scale-90 object-center transition-transform duration-700"
+              />
+            </div>
+
+            {/* Active Learner Badge */}
             <div className="absolute bottom-2 -right-2 glass shadow-lg border border-gray-200/10 px-4 py-2 rounded-full flex items-center gap-2 animate-bounce">
               <span className="w-2.5 h-2.5 bg-green-500 rounded-full animate-pulse" />
-              <span className="text-xs font-semibold text-slate-800 dark:text-white">Active Learner</span>
+              <span className="text-xs font-semibold text-slate-800 dark:text-white">
+                Active Learner
+              </span>
             </div>
+
           </div>
         </motion.div>
       </div>
